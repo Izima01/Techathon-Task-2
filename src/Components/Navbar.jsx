@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex, Link } from '@chakra-ui/react'
-import Logo from '../../media/Logo.svg'
+import Logo from '../../media/logo.svg'
 
 const Navbar = () => {
     return (

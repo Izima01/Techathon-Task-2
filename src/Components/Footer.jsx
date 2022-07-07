@@ -1,7 +1,14 @@
 import React from 'react'
+
+// React icons
 import { Box, Flex, Image, Link, Text } from '@chakra-ui/react'
 import { RiFacebookCircleLine, RiInstagramLine } from 'react-icons/ri'
 import { TiSocialTwitterCircular } from 'react-icons/ti'
+
+// Images
+import footerLogo from '../../media/footerlogo.svg'
+import iconEmail from '../../media/icon-email.svg'
+import iconPhone from '../../media/icon-phone.svg'
 
 
 const Footer = () => {
@@ -11,11 +18,11 @@ const Footer = () => {
         bg={'#07043b'}
     >
         <Box
-            p={['30px', '30px', '50px', '110px 80px 0']}    
+            p={['30px', '30px', '50px', '100px 80px 0']}    
             color={'white'}
         >
             <Image
-                src='../../media/footerLogo.svg'
+                src={footerLogo}
                 pb={'30px'}
             />
             <Flex
@@ -29,7 +36,7 @@ const Footer = () => {
                         pb={'20px'}
                     >
                         <Image
-                            src='../../media/icon-phone.svg'
+                            src={iconEmail}
                             pe={'20px'}
                         />
                         <Text fontSize={['22px', '22px', '18px', '18px']}>Phone: +1-543-123-4567</Text>
@@ -39,7 +46,7 @@ const Footer = () => {
                         pb={'20px'}
                     >
                         <Image
-                            src='../../media/icon-email.svg'
+                            src={iconPhone}
                             pe={'20px'}
                         />
                         <Text fontSize={['22px', '22px', '18px', '18px']}

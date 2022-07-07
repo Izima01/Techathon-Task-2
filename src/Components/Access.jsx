@@ -22,7 +22,7 @@ const Access = () => {
             >
                 <Heading
                     m={['0 0 20px 0', '0 0 20px 0', '0 10px 25px 0', '0 30px 25px 0']}
-                    fontSize={['24px', '24px', '24px', '20px']}
+                    fontSize={['24px', '24px', '24px', '24px']}
                     textAlign={['center', 'center', 'start']}
                 >
                     Get early access today

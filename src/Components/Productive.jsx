@@ -1,5 +1,11 @@
 import React from 'react'
 import { Box, Flex, Heading, Text, Link, Image } from '@chakra-ui/react'
+import bgCurveD from '../../media/bg-curve-desktop.svg'
+import bgCurveM from '../../media/bg-curve-mobile.svg'
+import arrow from '../../media/icon-arrow.svg'
+import quotes from '../../media/icon-quotes.svg'
+import avatar from '../../media/avatar-testimonial.jpg'
+
 
 const Productive = () => {
     return (
@@ -12,11 +18,11 @@ const Productive = () => {
             height={'100px'}
         >
             <Image
-                src={'../../media/bg-curve-desktop.svg'}
+                src={bgCurveD}
                 display={['none', 'none', 'block']}
             />
             <Image
-                src={'../../media/bg-curve-mobile.svg'}
+                src={bgCurveM}
                 display={['inline', 'inline', 'none']}
             />
         </Box>
@@ -24,7 +30,7 @@ const Productive = () => {
             bg={'#f9f8fe'}
             h={'auto'}
             mt={['-60px', '-60px', '-40px', '-10px']}
-            p={['10px 10px', '10px 10px', '0 50px 30px', '0px 80px']}
+            p={['10px 10px', '10px 10px', '0 50px 30px', '0px 80px -20px']}
         >
             <Flex
                 flexDirection={['column-reverse', 'column-reverse', 'row' ]}
@@ -75,7 +81,7 @@ const Productive = () => {
                             See how Fylo works
                         </Text>
                         <Image
-                            src='../../media/icon-arrow.svg'
+                            src={arrow}
                             boxSize={['20px', '20px', '18px']}
                             objectFit={'cover'}
                         />
@@ -91,7 +97,7 @@ const Productive = () => {
                         display={['block', 'block', 'none', 'block' ]}
                     >
                         <Image
-                            src={'../../media/icon-quotes.svg'}
+                            src={quotes}
                             boxSize={'14px'}
                             objectFit={'cover'}
                         />
@@ -109,7 +115,7 @@ const Productive = () => {
                             pt={'5px'}
                         >
                             <Image 
-                                src='../../media/avatar-testimonial.jpg'
+                                src={avatar}
                                 boxSize='35px'
                                 borderRadius={'full'}
                                 objectFit={'cover'}
@@ -130,6 +136,7 @@ const Productive = () => {
                     h={['320px', '320px', '320px', 'auto']}
                 ></Box>
             </Flex>
+
             <Box className='testimonial'
                 bg={'white'}
                 width={'72%'}
@@ -139,7 +146,7 @@ const Productive = () => {
                 display={['none', 'none', 'block', 'none' ]}
             >
                 <Image
-                    src={'../../media/icon-quotes.svg'}
+                    src={quotes}
                     boxSize={'14px'}
                     objectFit={'cover'}
                 />
@@ -157,7 +164,7 @@ const Productive = () => {
                     pt={'5px'}
                 >
                     <Image 
-                        src='../../media/avatar-testimonial.jpg'
+                        src={avatar}
                         boxSize='35px'
                         borderRadius={'full'}
                         objectFit={'cover'}

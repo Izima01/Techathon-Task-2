@@ -39,7 +39,7 @@ const Productive = () => {
             >
                 <Box className='left' w={['100%', '100%', '50%', '60%']}>
                     <Heading
-                        fontSize={['19px', '19px', '32px']}
+                        fontSize={['20px', '19px', '32px']}
                         fontWeight={[600, 600, 600]}
                         my={'20px'}
                         textAlign={['center', 'center', 'start']}
@@ -70,7 +70,7 @@ const Productive = () => {
                         alignItems={'center'}
                         to="#" pb={'7px'} px={'3px'}
                         borderBottom={'2px solid #3c9f8a'} 
-                        width={['190px', '172px']}
+                        width={['195px', '172px']}
                         mx={['auto', 'auto', '0']}
                     >
                         <Text

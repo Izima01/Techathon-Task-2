@@ -84,11 +84,11 @@ const Footer = () => {
                 <Box
                     w={['100%', '100%', 'auto', '130px']}
                 >
-                    <Flex
+                <Flex
                     justify={'space-between'}
                     align={'center'}
                     mx={'auto'}
-                    w={'auto'}
+                    w={['50%', '50%', 'auto', 'auto']}
                     h={['auto', 'auto', '130px', 'auto']}
                     flexDirection={['row', 'row', 'column', 'row']}
                 >

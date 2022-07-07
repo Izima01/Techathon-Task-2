@@ -6,7 +6,7 @@ import { RiFacebookCircleLine, RiInstagramLine } from 'react-icons/ri'
 import { TiSocialTwitterCircular } from 'react-icons/ti'
 
 // Images
-import footerLogo from '../../media/footerlogo.svg'
+import footerLogo from '../../media/footerLogo.svg'
 import iconEmail from '../../media/icon-email.svg'
 import iconPhone from '../../media/icon-phone.svg'
 

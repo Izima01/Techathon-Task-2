@@ -21,21 +21,21 @@ const Navbar = () => {
                 </Box>
                 <Flex w={['50%', '50%', '30%', '25%']} justify={'space-between'}>
                     <Link 
-                        to="#" fontSize={'14px'}
+                        to="#" fontSize={'15px'}
                         _hover={{textDecoration:'none', transform:'scale(1.2)'}}
                     >
                         Features
                     </Link>
 
                     <Link 
-                        to="#" fontSize={'14px'}
+                        to="#" fontSize={'15px'}
                         _hover={{textDecoration:'none', transform:'scale(1.2)'}}
                     >
                         Team
                     </Link>
                     
                     <Link
-                        to="#" fontSize={'14px'}
+                        to="#" fontSize={'15px'}
                         _hover={{textDecoration:'none', transform:'scale(1.2)'}}
                     >
                         Sign In

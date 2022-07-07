@@ -82,7 +82,7 @@ const Footer = () => {
                 </Flex>
 
                 <Box
-                    w={['100%', '100%', 'auto', '0']}
+                    w={['100%', '100%', 'auto', '130px']}
                 >
                     <Flex
                     justify={'space-between'}

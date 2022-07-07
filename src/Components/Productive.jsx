@@ -5,6 +5,7 @@ import bgCurveM from '../../media/bg-curve-mobile.svg'
 import arrow from '../../media/icon-arrow.svg'
 import quotes from '../../media/icon-quotes.svg'
 import avatar from '../../media/avatar-testimonial.jpg'
+import illustration2 from '../../media/illustration-2.svg'
 
 
 const Productive = () => {
@@ -30,7 +31,7 @@ const Productive = () => {
             bg={'#f9f8fe'}
             h={'auto'}
             mt={['-60px', '-60px', '-40px', '-10px']}
-            p={['10px 10px', '10px 10px', '0 50px 30px', '0px 80px -20px']}
+            p={['10px 10px', '0 60px 30px', '0px 80px -10px']}
         >
             <Flex
                 flexDirection={['column-reverse', 'column-reverse', 'row' ]}
@@ -130,11 +131,10 @@ const Productive = () => {
                 <Box className='right'
                     margin={['0', '0', '50px 0 20px']}
                     w={['100%', '100%', '50%', '40%']}
-                    bgImage={"url('../../media/illustration-2.svg')"}
-                    bgSize={'contain'}
-                    bgRepeat={'no-repeat'}
                     h={['320px', '320px', '320px', 'auto']}
-                ></Box>
+                >
+                    <img src={illustration2} />
+                </Box>
             </Flex>
 
             <Box className='testimonial'

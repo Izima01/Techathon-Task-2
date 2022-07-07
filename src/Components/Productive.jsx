@@ -31,7 +31,7 @@ const Productive = () => {
             bg={'#f9f8fe'}
             h={'auto'}
             mt={['-60px', '-60px', '-40px', '-10px']}
-            p={['10px 20px', '10px 20px', '0 30px 30px', '0px 80px -10px']}
+            p={['10px 20px', '10px 20px', '0 30px 30px', '0 80px','0px 80px -10px']}
         >
             <Flex
                 flexDirection={['column-reverse', 'column-reverse', 'row' ]}

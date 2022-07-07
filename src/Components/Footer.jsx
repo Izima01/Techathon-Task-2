@@ -14,11 +14,11 @@ import iconPhone from '../../media/icon-phone.svg'
 const Footer = () => {
     return (
     <Box
-        height={['auto', 'auto', '390px']}
+        height={['auto', 'auto', '430px']}
         bg={'#07043b'}
     >
         <Box
-            p={['30px', '30px', '50px', '100px 80px 0']}    
+            p={['40px', '40px', '50px', '100px 80px 0']}
             color={'white'}
         >
             <Image
@@ -55,9 +55,9 @@ const Footer = () => {
                 </Box>
                 <Flex
                     flexDirection={'column'}
-                    height={['200px', '200px', '170px', '150px']}
+                    height={['200px', '200px', '170px', '200px']}
                     justify={'space-between'}
-                    fontSize={['20px', '22px', '18px', '16px']}
+                    fontSize={['20px', '22px', '18px', '24px']}
                     mr={['100px', '100px', '50px', '160px']}
                     mb={['30px', '30px', '0', '0']}
                     mt={['30px', '30px', '0']}
@@ -72,7 +72,7 @@ const Footer = () => {
                     flexDirection={'column'}
                     height={['150px', '150px', '120px']}
                     justify={'space-between'}
-                    fontSize={['20px', '22px', '18px', '16px']}
+                    fontSize={['20px', '22px', '18px', '24px']}
                     mr={['100px', '100px', '80px', '160px']}
                     mb={['30px', '30px', '0']}
                 >
@@ -95,19 +95,19 @@ const Footer = () => {
                     <Link 
                         to="#"
                         _hover={{ color:'#828fd5' }}>
-                        <RiFacebookCircleLine fontSize={'32px'}/>
+                        <RiFacebookCircleLine fontSize={'36px'}/>
                     </Link>
 
                     <Link 
                         to="#"
                         _hover={{ color:'#828fd5' }}>
-                        <TiSocialTwitterCircular fontSize={'36px'}/>
+                        <TiSocialTwitterCircular fontSize={'40px'}/>
                     </Link>
 
                     <Link
                         to="#"
                         _hover={{ color:'#828fd5' }}>
-                        <RiInstagramLine fontSize={'30px'}/>
+                        <RiInstagramLine fontSize={'32px'}/>
                     </Link>
                 </Flex>
                 </Box>

@@ -9,7 +9,7 @@ const Access = () => {
         bg={'#575989'}
     >
         <Flex
-        m={['0 20px', '0 20px', '0 50px', '0 80px']}
+        m={['0 20px', '0 20px', '0 50px', '0px 80px']}
         w={'auto'}
         h={['auto', 'auto', 'auto', '320px']}
         pt={['30px', '30px', '50px', '100px']}

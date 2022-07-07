@@ -8,7 +8,7 @@ const TopSection = () => {
     <HStack 
         flexDirection={['column-reverse', 'column-reverse', 'row']}
         width={'auto'}
-        margin={['80px 20px 0', '60px 20px 0', '-100px 40px -40px', '0 80px', '0 80px']}
+        margin={['80px 20px 0', '60px 20px 0', '-100px 40px -40px', '0 80px 20px', '0 80px 20px']}
         height={['auto', 'auto', '480px']}
     >
         <Box

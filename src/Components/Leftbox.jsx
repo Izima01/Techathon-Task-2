@@ -5,7 +5,7 @@ const Leftbox = () => {
     return (
     <Box w={['100%','100%','45%']} textAlign={['center', 'center', 'start']}>
         <Text 
-            fontSize={'28px'}
+            fontSize={'32px'}
             fontWeight={'700'}
             color={'white'}
             lineHeight={'36px'}

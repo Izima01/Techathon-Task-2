@@ -1,9 +1,9 @@
-import { Flex, Text, VStack } from '@chakra-ui/react';
+import { Flex, Text, VStack, Link } from '@chakra-ui/react';
 import React, { useState, useEffect, useRef } from 'react'
+import swal from 'sweetalert'
 
 import FormItem from './FormItem'
 import Buttons from './Buttons'
-
 
 const Form = () => {
     const initialData = {
@@ -31,7 +31,6 @@ const Form = () => {
         event.preventDefault();
         if (!firstName) {
             setFirstNameError(true);
-            // errors.firstName=true;
         }
         if (firstName) {
             setFirstNameError(false)
@@ -39,7 +38,6 @@ const Form = () => {
 
         if (!lastName) {
             setLastNameError(true);
-            // errors.firstName=true;
         }
         if (lastName) {
             setLastNameError(false)
@@ -57,15 +55,18 @@ const Form = () => {
         if (password.length>=8) {
             setPasswordError(false)
         }
-        else {
-            return
+        if (password.length>8 && emailAddress && regex.test(emailAddress)===true && lastName && firstName) {
+            swal ({
+                icon:'success',
+                text:`Congratulations ${lastName} ${firstName}, your response has been accepted`
+            })
         }
     }
 
     return (
         <VStack
             background={'white'} w={'100%'} h={'auto'} m={'20px 0'} borderRadius={'10px'}
-            padding={'30px'} as={'form'} boxShadow={'0px 5px 0px 0px hsla(0, 0%, 0%, 0.3)'}
+            padding={['30px 15px', '30px 15px', '30px']} as={'form'} boxShadow={'0px 5px 0px 0px hsla(0, 0%, 0%, 0.3)'}
         >
             <FormItem
                 mb={'20px'} placeholder={'First Name'} type={'text'} value={firstName}
@@ -73,7 +74,7 @@ const Form = () => {
                 displayError={firstNameError ? 'block' : 'none'}
                 errorText={'First name can not be empty'}
                 border={firstNameError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
-                color={firstNameError ? 'hsl(0, 100%, 74%)' : 'grey' }
+                color={firstNameError ? 'hsl(0, 100%, 74%)' : 'black' }
             />
 
             <FormItem
@@ -82,7 +83,7 @@ const Form = () => {
                 displayError={lastNameError ? 'block' : 'none'}
                 errorText={'Last name can not be empty'}
                 border={lastNameError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
-                color={lastNameError ? 'hsl(0, 100%, 74%)' : 'grey' }
+                color={lastNameError ? 'hsl(0, 100%, 74%)' : 'black' }
             />
 
             <FormItem
@@ -91,7 +92,7 @@ const Form = () => {
                 errorText={'Looks like this is not an email'}
                 displayError={emailError ? 'block' : 'none'}
                 border={emailError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
-                color={emailError ? 'hsl(0, 100%, 74%)' : 'grey' }
+                color={emailError ? 'hsl(0, 100%, 74%)' : 'black' }
             />
 
             <FormItem
@@ -100,7 +101,7 @@ const Form = () => {
                 errorText={'Password can not be empty'}
                 displayError={passwordError ? 'block' : 'none'}
                 border={passwordError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
-                color={passwordError ? 'hsl(0, 100%, 74%)' : 'grey' }
+                color={passwordError ? 'hsl(0, 100%, 74%)' : 'black' }
             />
 
             <Buttons
@@ -112,13 +113,10 @@ const Form = () => {
                 type={'submit'} onClick={handleSubmit}
             />
 
-            <Flex align={'center'} justify={'space-between'} pt={'10px'}>
-                <Text fontSize={'15px'} color={'hsl(246, 25%, 77%)'}
-                >By clicking the button, you are agreeing to our</Text>
-
-                <Text fontSize={'15px'} color={'hsl(0, 100%, 74%)'} ps={'5px'} fontWeight={'700'}
-                >Terms and Services</Text>
-            </Flex>
+            <Text fontSize={'16px'} color={'hsl(246, 25%, 77%)'} pt={'10px'} textAlign={['center', 'center','center', 'center', 'start']}>
+                By clicking the button, you are agreeing to our
+                <Link color={'hsl(0, 100%, 74%)'} fontWeight={'700'}> Terms and Services</Link>
+            </Text>
         </VStack>
     )
 }

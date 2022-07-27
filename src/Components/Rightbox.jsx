@@ -14,8 +14,6 @@ const Rightbox = ({ children }) => {
             Text2={'then $20/mo. thereafter'}
             shadow={'hsla(249, 10%, 26%, 0.5)'}
             bgFocus={'hsl(248, 32%, 49%)'}
-            p={['0 100px', '0 100px', '0']}
-            // textW={'20%'}
         />
         <Box>{ children }</Box>
     </Box>

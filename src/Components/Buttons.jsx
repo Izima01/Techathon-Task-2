@@ -1,7 +1,7 @@
 import { Button, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const Buttons = ({ bgColor, TextBold, Text2, shadow, bgFocus, type, onClick }) => {
+const Buttons = ({ bgColor, TextBold, Text2, shadow, bgFocus, type, onClick, textW, p }) => {
     return (
     <Button
         width={'100%'}
@@ -17,7 +17,7 @@ const Buttons = ({ bgColor, TextBold, Text2, shadow, bgFocus, type, onClick }) =
             bgColor:bgColor
         }}
     >
-        <Text><strong>{TextBold}</strong>{Text2}</Text>
+        <Text padding={p} w={textW}><strong>{TextBold}</strong>{Text2}</Text>
     </Button>
     )
 }

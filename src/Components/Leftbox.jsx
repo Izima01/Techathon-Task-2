@@ -3,7 +3,7 @@ import React from 'react'
 
 const Leftbox = () => {
     return (
-    <Box w={'45%'}>
+    <Box w={['100%','100%','45%']} textAlign={['center', 'center', 'start']}>
         <Text 
             fontSize={'28px'}
             fontWeight={'700'}

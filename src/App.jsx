@@ -9,7 +9,8 @@ function App() {
 
   return (
     <Flex
-      p={'8% 10% 5%'}
+      flexDir={['column', 'column', 'row']}
+      p={['15% 5%', '15% 5%', '8% 10% 5%']}
       as={'main'}
       width={'100%'} h={'100vh'}
       bgPos={'center'} bgImage={Background}

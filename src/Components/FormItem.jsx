@@ -7,13 +7,14 @@ const FormItem = ({ type, value, placeholder, mb, onChange, name, displayError, 
     // const errorImg = useRef();
 
     return (
-        <FormControl pos={'relative'}>
+        <FormControl pos={'relative'} border={'none'}>
             <Input
                 w={'100%'} outline={'none'} mb={mb} onChange={onChange}
                 type={type} value={value} placeholder={placeholder}
                 name={name} paddingStart={'25px'} border={border}
                 opacity={1} color={color} fontWeight={600}
-                _focus={{ border: border, color: 'black' }}
+                _hover={{ border: border, color: 'black', outline:'none' }}
+                _focus={{ border: border, color: 'black', outline:'none' }}
                 _placeholder= {{ color:color }}
             />
             <Img

@@ -1,5 +1,5 @@
 import { Flex, Text, VStack } from '@chakra-ui/react';
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import FormItem from './FormItem'
 import Buttons from './Buttons'
@@ -24,22 +24,41 @@ const Form = () => {
         const {name, value} = event.target;
         setUserData({...userData, [name] : value});
     }
+    const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // console.log(userData);
-        if (firstName.length === 0) {
+        if (!firstName) {
             setFirstNameError(true);
+            // errors.firstName=true;
         }
-        if (lastName.length === 0) {
+        if (firstName) {
+            setFirstNameError(false)
+        }
+
+        if (!lastName) {
             setLastNameError(true);
+            // errors.firstName=true;
         }
-        let regex ='[a-z0-9]+@[a-z]+\.[a-z]{2,3}';
-        if (emailAddress.length === 0 || !regex.test(emailAddress)) {
+        if (lastName) {
+            setLastNameError(false)
+        }
+        if (!emailAddress || regex.test(emailAddress)===false) {
             setEmailError(true);
         }
-        if (password.length === 0) {
-            setPasswordError(true);
+        if (emailAddress && regex.test(emailAddress)===true) {
+            setEmailError(false)
+        }
+
+        if (password.length<=7) {
+            setPasswordError(true)
+        }
+        if (password.length>=8) {
+            setPasswordError(false)
+        }
+        else {
+            return
         }
     }
 
@@ -53,7 +72,7 @@ const Form = () => {
                 onChange={handleChange} name={'firstName'}
                 displayError={firstNameError ? 'block' : 'none'}
                 errorText={'First name can not be empty'}
-                border={firstNameError ? '2px solid hsl(0, 100%, 74%)' : '2px solid black'}
+                border={firstNameError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
                 color={firstNameError ? 'hsl(0, 100%, 74%)' : 'grey' }
             />
 
@@ -62,8 +81,8 @@ const Form = () => {
                 onChange={handleChange} name={'lastName'}
                 displayError={lastNameError ? 'block' : 'none'}
                 errorText={'Last name can not be empty'}
-                border={firstNameError ? '2px solid green' : '1px solid black'}
-                color={firstNameError ? 'hsl(0, 100%, 74%)' : 'grey' }
+                border={lastNameError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
+                color={lastNameError ? 'hsl(0, 100%, 74%)' : 'grey' }
             />
 
             <FormItem
@@ -71,8 +90,8 @@ const Form = () => {
                 onChange={handleChange} name={'emailAddress'}
                 errorText={'Looks like this is not an email'}
                 displayError={emailError ? 'block' : 'none'}
-                border={firstNameError ? '2px solid green' : '1px solid black'}
-                color={firstNameError ? 'hsl(0, 100%, 74%)' : 'grey' }
+                border={emailError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
+                color={emailError ? 'hsl(0, 100%, 74%)' : 'grey' }
             />
 
             <FormItem
@@ -80,8 +99,8 @@ const Form = () => {
                 onChange={handleChange} name={'password'}
                 errorText={'Password can not be empty'}
                 displayError={passwordError ? 'block' : 'none'}
-                border={firstNameError ? '2px solid green' : '1px solid black'}
-                color={firstNameError ? 'hsl(0, 100%, 74%)' : 'grey' }
+                border={passwordError ? '2px solid hsl(0, 100%, 74%)' : '1px solid black'}
+                color={passwordError ? 'hsl(0, 100%, 74%)' : 'grey' }
             />
 
             <Buttons

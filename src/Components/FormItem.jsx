@@ -1,5 +1,5 @@
-import { FormControl, FormLabel, Img, Input, TagLabel, Text } from '@chakra-ui/react'
-import React, { useEffect, useRef, useState } from 'react'
+import { FormControl, Img, Input, Text } from '@chakra-ui/react'
+import React from 'react'
 import errorIcon from '../../images/icon-error.svg'
 
 const FormItem = ({ type, value, placeholder, mb, onChange, name, displayError, errorText, border, color }) => {
@@ -12,7 +12,7 @@ const FormItem = ({ type, value, placeholder, mb, onChange, name, displayError, 
                 w={'100%'} outline={'none'} mb={mb} onChange={onChange}
                 type={type} value={value} placeholder={placeholder}
                 name={name} paddingStart={'25px'} border={border}
-                opacity={1} color={color} fontWeight={600}
+                color={color} fontWeight={600}
                 _hover={{ border: border, color: 'black', outline:'none' }}
                 _focus={{ border: border, color: 'black', outline:'none' }}
                 _placeholder= {{ color:color }}

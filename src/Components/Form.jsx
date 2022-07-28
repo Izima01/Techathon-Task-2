@@ -55,7 +55,7 @@ const Form = () => {
         if (password.length>=8) {
             setPasswordError(false)
         }
-        if (password.length>8 && emailAddress && regex.test(emailAddress)===true && lastName && firstName) {
+        if (password.length>7 && emailAddress && regex.test(emailAddress)===true && lastName && firstName) {
             swal ({
                 icon:'success',
                 text:`Congratulations ${lastName} ${firstName}, your response has been accepted`

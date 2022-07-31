@@ -1,29 +1,31 @@
-import {Flex } from '@chakra-ui/react'
+import {Flex, Box } from '@chakra-ui/react'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Leftbox from './Components/Leftbox'
-import Background from '../images/bg-intro-desktop.png'
-import BackgroundMobile from '../images/bg-intro-mobile.png'
-import Rightbox from './Components/Rightbox'
-import Form from './Components/Form'
+import Register from './Components/Register'
+import Login from './Components/Login'
+import SharedLayout from './Components/SharedLayout'
+import Dashboard from './Components/Dashboard'
+import Error from './Components/Error'
+
+// React Toastify Imports
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
-
   return (
-    <Flex
-      flexDir={['column', 'column', 'row']}
-      p={['20% 6% 5%', '10% 6% 0', '0% 5%', null, '6% 10% 4%']}
-      as={'main'}
-      maxW={'100%'} minH={'100vh'}
-      bgPos={'center'} bgImage={[BackgroundMobile, BackgroundMobile, Background]}
-      bgColor={'hsla(0, 100%, 74%, 0.9)'}
-      bgRepeat={'no-repeat'} bgSize={'cover'}
-      gap={['50px', '50px', '20px']} align={'center'}
-    >
-      <Leftbox />
-      <Rightbox>
-        <Form />
-      </Rightbox>
-    </Flex>
+    <Box >
+      <Routes>
+        <Route path={'/'} element={<SharedLayout />} >
+          <Route index element={<Register />} />
+          <Route path={'login'} element={<Login />} />
+
+          <Route path={'dashboard'} element={<Dashboard />} />
+          <Route path={'*'} element={<Error />} />
+        </Route>
+      </Routes>
+      <ToastContainer autoclose={1500} position={'top-left'} newestOnTop={true}/>
+    </Box>
   )
 }
 

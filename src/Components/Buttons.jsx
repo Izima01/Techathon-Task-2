@@ -1,24 +1,22 @@
-import { Button, Text } from '@chakra-ui/react'
+import { Flex, Button } from '@chakra-ui/react'
 import React from 'react'
 
-const Buttons = ({ bgColor, TextBold, Text2, shadow, bgFocus, type, onClick, Text3 }) => {
+const Buttons = ({ bg, fs, fw, w, m, p, onClick, color, Text, bgFocus }) => {
     return (
-    <Button
-        width={'100%'}
-        backgroundColor={bgColor}
-        boxShadow={`0px 5px 0px 1px ${shadow}`}
-        color={'white'}
-        type={type}
-        onClick={onClick}
-        _focus={{
-            backgroundColor:bgFocus
-        }}
-        _hover={{
-            bgColor:bgColor
-        }}
-    >
-        <Text><strong>{TextBold}</strong>{Text2} <br />{Text3} </Text>
-    </Button>
+        <Flex justify={'center'} >
+            <Button
+                type={'submit'}
+                border={'none'} borderRadius={'10px'}
+                bg={bg} m={m} fontWeight={fw}
+                width={w} p={p}
+                color={color} fontSize={fs}
+                onClick={onClick}
+                _hover={{bg:bg}}
+                _active={{bg:bgFocus}}
+            >
+                {Text}
+            </Button>
+        </Flex>
     )
 }
 

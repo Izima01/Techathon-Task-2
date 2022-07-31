@@ -5,7 +5,7 @@ import RightSection from './RightSection'
 
 const Register = () => {
     return (
-        <Flex w={'100%'} minHeight={'auto'} mt={['70px', '70px', '50px',]} flexDir={['column', 'column', 'row']}>
+        <Flex w={'100%'} minHeight={'auto'} mt={['60px', '60px', '50px',]} flexDir={['column', 'column', 'row']}>
             <LeftSection text={'Create a Mansha account today'}/>
             <RightSection />
         </Flex>

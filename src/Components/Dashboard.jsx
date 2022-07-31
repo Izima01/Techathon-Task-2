@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import React from 'react'
+import LeftSection from './LeftSection'
 
 const Dashboard = () => {
     return (
@@ -7,7 +8,7 @@ const Dashboard = () => {
         w={'100%'} minHeight={'90vh'} mt={['70px', '70px', '60px',]}
         flexDir={['column', 'column', 'row']}
     >
-        Dashboard
+        <LeftSection text={'Here\'s Your Dashboard'}/>
     </Flex>
     )
 }

@@ -1,4 +1,4 @@
-import { Box, Flex, Checkbox } from '@chakra-ui/react'
+import { Box, Flex, Checkbox, Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -85,8 +85,8 @@ const RightSection = () => {
 
     return (
         <Box
-            w={['100%', '100%', '65%']} h={'auto'}
-            padding={[ '2%', '2.5%', '3% 2% 4%', '3% 4% 4%']}
+            w={['100%', '100%', '60%', '65%']} h={'auto'}
+            padding={[ '4% 2%', '2.5%', '3% 2% 4%', '3% 4% 4%']}
         >
             <Box
                 w={'100%'} as={'form'}
@@ -95,7 +95,9 @@ const RightSection = () => {
                 borderRadius={'10px'}
                 padding={['20px 15px', '20px 15px', '30px 20px', '40px']}
             >
-                <Flex justify={'space-between'} gap={['10px', '10px', '20px', '30px']}>
+                <Text fontSize={'30px'} textAlign={'center'} fontWeight={700} mb={'20px'} >Register An Account Now</Text>
+
+                <Flex justify={'space-between'} gap={['10px', '10px', '15px', '30px']} flexDir={['column', 'column', 'row']} >
                     <FormItem
                         Label={'First Name'} placeholder={'Enter your last Name'}
                         type={'text'} value={firstName} onChange={handleChange} name={'firstName'}
@@ -107,7 +109,7 @@ const RightSection = () => {
                     />
                 </Flex>
 
-                <Flex justify={'space-between'} gap={['10px', '10px', '20px', '30px']}>
+                <Flex justify={'space-between'} gap={['10px', '10px', '15px', '30px']} flexDir={['column', 'column', 'row']}>
                     <FormItem
                         Label={'Email Address'} placeholder={'Enter your email'}
                         type={'email'} value={email} onChange={handleChange} name={'email'}

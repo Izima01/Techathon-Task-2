@@ -71,8 +71,7 @@ const RightSection = () => {
         if (password !== confirmPassword) {
             toast.error('Your password doesn\'t match')
         }
-        // if ( firstName && lastName && number && email && gender && country && password &&  (password === confirmPassword) ) {
-        else {
+        else if ( firstName && lastName && number && email && gender && country && password &&  (password === confirmPassword) ) {
             swal({
                 icon:'success',
                 title: 'Congratulations',

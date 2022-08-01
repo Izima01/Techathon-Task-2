@@ -26,7 +26,7 @@ function App() {
           <Route path={'*'} element={<Error />} />
         </Route>
       </Routes>
-      <ToastContainer autoclose={1500} position={'top-left'} newestOnTop={true} style={{ minHeight:'48px', width:'280px' }} />
+      <ToastContainer autoclose={1500} position={'top-left'} newestOnTop={true} style={{ minHeight:'40px' }} />
     </Box>
   )
 }

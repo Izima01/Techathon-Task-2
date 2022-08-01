@@ -42,7 +42,7 @@ const RightSection = () => {
         const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         console.log(userData);
         if (!firstName || firstName.includes(' ')) {
-            toast.error('First Name must not be empty and must not contain space');
+            toast.error('First Name cannot be empty and must not contain space');
         }
         if (!lastName || lastName.includes(' ')) {
             toast.error('Last Name cannot be empty and must not contain space');

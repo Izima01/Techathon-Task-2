@@ -12,12 +12,12 @@ const Country = ({onChange}) => {
                 onChange={onChange}
                 placeholder={'Select your Country'}
             >
-                <option value="nigeria">Nigeria</option>
-                <option value="south-africa">South Africa</option>
-                <option value="egypt">Egypt</option>
-                <option value="brazil">Brazil</option>
-                <option value="australia">Australia</option>
-                <option value="france">France</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Australia">Australia</option>
+                <option value="France">France</option>
             </Select>
         </FormControl>
     </Flex>

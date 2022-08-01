@@ -33,23 +33,27 @@ const RightSection = () => {
         setUserData({ ...userData, [name]: type === 'checkbox' ? checked : value });
     }
 
+    // useEffect(() => {
+    //     localStorage.removeItem('userData')
+    // }, [])
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         console.log(userData);
-        if (firstName === '') {
-            toast.error('First Name cannot be empty');
+        if (!firstName || firstName.includes(' ')) {
+            toast.error('First Name must not be empty and must not contain space');
         }
-        if (lastName === '') {
-            toast.error('Last Name cannot be empty');
+        if (!lastName || lastName.includes(' ')) {
+            toast.error('Last Name cannot be empty and must not contain space');
         }
-        if (email === '') {
-            toast.error('Last Name cannot be empty');
+        if (!email) {
+            toast.error('Email cannot be empty');
         }
         if (!regexEmail.test(email)) {
             toast.error('Looks like your email is not valid')
         }
-        if (number === '') {
+        if (!number) {
             toast.error('Phone number cannot be empty');
         }
         if (gender === '') {
@@ -67,7 +71,8 @@ const RightSection = () => {
         if (password !== confirmPassword) {
             toast.error('Your password doesn\'t match')
         }
-        if ( firstName && lastName && number && email && gender && country && password &&  (password === confirmPassword) ) {
+        // if ( firstName && lastName && number && email && gender && country && password &&  (password === confirmPassword) ) {
+        else {
             swal({
                 icon:'success',
                 title: 'Congratulations',
@@ -86,7 +91,7 @@ const RightSection = () => {
     return (
         <Box
             w={['100%', '100%', '60%', '65%']} h={'auto'}
-            padding={[ '4% 2%', '2.5%', '3% 2% 4%', '3% 4% 4%']}
+            padding={[ '4%', '2.5% 5%', '3% 4% 4%', '3% 6% 4%']}
         >
             <Box
                 w={'100%'} as={'form'}
@@ -136,7 +141,7 @@ const RightSection = () => {
                     colorScheme={'blue'}
                 >
                     Do you agree to our terms and conditions?
-                </Checkbox>
+                </Checkbox><br />
 
                 <Checkbox
                     checked={subscribe}

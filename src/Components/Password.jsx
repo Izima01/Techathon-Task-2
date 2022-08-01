@@ -35,7 +35,7 @@ const Password = ({ onChange, value, valueConfirm, dConfirm }) => {
                     onClick={handlePassword}
                     _hover= {{ bg:'none' }}
                     _focus= {{ bg:'none' }}
-                    fontSize={'24px'}
+                    fontSize={'20px'}
                     zIndex={5}
                 >
                     {show ? <BsEyeSlash /> : <BsEye />}
@@ -59,7 +59,7 @@ const Password = ({ onChange, value, valueConfirm, dConfirm }) => {
                     onClick={handlePasswordConfirm}
                     _hover= {{ bg:'none' }}
                     _focus= {{ bg:'none' }}
-                    fontSize={'24px'}
+                    fontSize={'20px'}
                     zIndex={5}
                 >
                     {showConfirm ? <BsEyeSlash /> : <BsEye />}

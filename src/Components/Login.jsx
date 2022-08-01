@@ -19,45 +19,52 @@ const Login = () => {
     useEffect(() => {
         const regData = localStorage.getItem('userData');
         setUserInfo(JSON.parse(regData));
-        console.log(userInfo);
+        userInfo && console.log(userInfo);
     }, [])
 
     const handleSubmit =(event) => {
         event.preventDefault;
         if (email === '') {
-            toast.error('Last Name cannot be empty');
+            toast.error('Please input your email');
         }
-        if (email !== userInfo.email) {
+        else if (email !== userInfo.email) {
             toast.error('Your email is incorrect');
         }
         if (!password) {
             toast.error('Please input your password')
         }
-        if (password !== userInfo.password) {
+        else if (password.length < 8) {
+            toast.error('Your password cannot be less than 8 chaacters')
+        }
+        else if (password !== userInfo.password) {
             toast.error('Your password is incorrect');
         }
-        if (email === userInfo.email && password === userInfo.password) {
+        // (email === userInfo.email && password === userInfo.password)
+        else {
             swal({
                 icon:'success',
                 title:'Congratulations',
                 text:'You have logged in.'
             })
-            navigate('/login')
+            localStorage.setItem('email', email)
+            localStorage.setItem('password', password)
+            
+            navigate('/dashboard');
         }
     }
 
     return (
         <Flex
-            w={'100%'} minHeight={[null, null, null, '92vh']}
+            w={'100%'} minHeight={[null, null, null, '91.5vh']}
             mt={['70px', '70px', '50px',]} as={'main'}
             flexDir={['column', 'column', 'row']}
         >
-            <LeftSection text={'Login to Your Mansha Account'}/>
+            <LeftSection text={'Login to Your Mansha Account'} />
             <Box
                 w={['auto', 'auto', '65%']} h={'auto'}
                 bg={'twitter.400'} borderRadius={'15px'}
-                margin={[ '3% 6% 10%', '4% 8% 8%', '3% 2% 3%', '4% 8% 3%']}
-                padding={['20px', '20px 40px', '30px 20px', '80px 40px']}
+                margin={[ '3% 4% 10%', '4% 8% 8%', '5% 5% 2%', '6% 8% 4%']}
+                padding={['20px', '20px 40px', '30px 20px', '40px']}
             >
                 <Text fontSize={'30px'} textAlign={'center'} fontWeight={700} mb={'20px'} >Login To Your Account</Text>
 

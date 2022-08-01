@@ -10,6 +10,7 @@ import Error from './Components/Error'
 // React Toastify Imports
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import ProtectedRoutes from './Components/ProtectedRoutes'
 
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
         <Route path={'/'} element={<SharedLayout />} >
           <Route index element={<Register />} />
           <Route path={'login'} element={<Login />} />
-
-          <Route path={'dashboard'} element={<Dashboard />} />
+          <Route element={<ProtectedRoutes />} > 
+            <Route path={'dashboard'} element={<Dashboard />} />
+          </Route>
           <Route path={'*'} element={<Error />} />
         </Route>
       </Routes>

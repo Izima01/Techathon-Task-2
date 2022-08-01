@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
     <Flex
-        height={['60px', '60px', '70px']} borderBottom={'1px solid black'} bg={'white'}
+        height={['50px', '55px', '60px', '70px']} borderBottom={'1px solid black'} bg={'white'}
         p={['0 0 10px', '0 0 10px', '10px 60px']} align={'center'}
         pos={'fixed'} top={'0'} zIndex={100} left={0} right={0} gap={'0'}
         flexDir={['column', 'column', 'row']} justify={['flex-start', 'flex-start', 'center', 'space-between']}

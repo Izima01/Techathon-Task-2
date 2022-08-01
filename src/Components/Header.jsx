@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
     <Flex
-        height={['50px', '55px', '60px', '70px']} borderBottom={'1px solid black'} bg={'white'}
+        height={['55px', '55px', '60px', '70px']} borderBottom={'1px solid black'} bg={'white'}
         p={['0 0 10px', '0 0 10px', '10px 60px']} align={'center'}
         pos={'fixed'} top={'0'} zIndex={100} left={0} right={0} gap={'0'}
         flexDir={['column', 'column', 'row']} justify={['flex-start', 'flex-start', 'center', 'space-between']}
@@ -38,8 +38,8 @@ const Header = () => {
         </Flex>
         
         <Flex
-            as={'nav'} w={['100%', '100%', '60%', '36%']}
-            gap={'5'} bg={'white'} overflow={ show ? 'none' : 'hidden'}
+            as={'nav'} w={['100%', '100%', '60%', '36%']} opacity={show ? 1 : 0}
+            gap={'5'} bg={'white'} transform={show ? 'translateX(0%)' : 'translateX(100%)'}
             padding={['0 20px 10px', '0 20px 10px', '0']} color={'blue'}
             flexDir={['column', 'column', 'row']} height={'auto'}
             fontSize={'24px'} fontWeight={500} justify={'space-between'} 

@@ -103,19 +103,19 @@ const RightSection = () => {
 
                 <Flex justify={'space-between'} gap={['10px', '10px', '15px', '30px']} flexDir={['column', 'column', 'row']} >
                     <FormItem
-                        Label={'First Name'} placeholder={'Enter your last Name'}
+                        Label={'First Name'} placeholder={'Enter your First Name'}
                         type={'text'} value={firstName} onChange={handleChange} name={'firstName'}
                     />
 
                     <FormItem
-                        Label={'Last Name'} placeholder={'Enter your last Name'}
+                        Label={'Last Name'} placeholder={'Enter your Last Name'}
                         type={'text'} value={lastName} onChange={handleChange} name={'lastName'}
                     />
                 </Flex>
 
                 <Flex justify={'space-between'} gap={['10px', '10px', '15px', '30px']} flexDir={['column', 'column', 'row']}>
                     <FormItem
-                        Label={'Email Address'} placeholder={'Enter your email'}
+                        Label={'Email Address'} placeholder={'Enter your Email'}
                         type={'email'} value={email} onChange={handleChange} name={'email'}
                     />
 

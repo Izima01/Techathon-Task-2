@@ -24,7 +24,10 @@ const Login = () => {
 
     const handleSubmit =(event) => {
         event.preventDefault;
-        if (email === '') {
+        if (userInfo === null) {
+            toast.info('You need to sign up first')
+        }
+        else if (email === '') {
             toast.error('Please input your email');
         }
         else if (email !== userInfo.email) {

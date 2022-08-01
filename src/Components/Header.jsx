@@ -38,11 +38,12 @@ const Header = () => {
         </Flex>
         
         <Flex
-            as={'nav'} w={['100%', '100%', '60%', '36%']} opacity={show ? 1 : 0}
-            gap={'5'} bg={'white'} transform={show ? 'translateX(0%)' : 'translateX(100%)'}
+            as={'nav'} w={['100%', '100%', '60%', '36%']} opacity={[show ? 1 : 0, show ? 1 : 0, 1]}
+            gap={'5'} bg={'white'} 
             padding={['0 20px 10px', '0 20px 10px', '0']} color={'blue'}
             flexDir={['column', 'column', 'row']} height={'auto'}
-            fontSize={'24px'} fontWeight={500} justify={'space-between'} 
+            fontSize={'24px'} fontWeight={500} justify={'space-between'}
+            transform={[(show ? 'translateX(0%)' : 'translateX(100%)'), (show ? 'translateX(0%)' : 'translateX(100%)'), 'translateX(0%)' ]}
         >
             <NavLink to={'/'}
                 style={({ isActive }) =>

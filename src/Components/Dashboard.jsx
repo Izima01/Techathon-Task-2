@@ -26,6 +26,7 @@ const Dashboard = () => {
                 icon: "success",
                 });
                 navigate('/login')
+                // localStorage.clear();
                 localStorage.removeItem('email')
                 localStorage.removeItem('password')
             }
